@@ -4,7 +4,6 @@ This task involves defining additional resources, organizing the Terraform code 
 
 ## Prerequisites
 
-- Completion of the previous task, **Terraform Initial Setup**.
 - Basic understanding of Terraform and Azure.
 - Terraform installed on your machine.
 - Azure CLI installed and configured.
