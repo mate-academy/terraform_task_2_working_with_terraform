@@ -27,7 +27,7 @@ jobs:
 
     - name: Terraform Validate
       run: terraform validate
-    
+
     - name: Check variables.tf
       run: |
         if [ ! -f variables.tf ]; then
@@ -51,7 +51,7 @@ jobs:
           exit 1
         fi
         echo "outputs.tf is present."
-    
+
     - name: Check tfplan
       run: |
         if [ ! -f tfplan ]; then
