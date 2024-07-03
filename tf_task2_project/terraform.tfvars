@@ -1,0 +1,5 @@
+resource_group_name  = "rg-terraform"
+location             = "West Europe"
+storage_account_name = "kirmystorageaccount"
+container_name       = "mycontainer"
+blob_name            = "myblob"
