@@ -12,7 +12,9 @@ jobs:
   terraform_validate:
     name: "Format and Validate Code"
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./tf_task2_project
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
