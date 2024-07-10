@@ -34,3 +34,4 @@ resource "azurerm_storage_blob" "blob" {
   source                 = "terraform_task_2.zip"
 }
 
+

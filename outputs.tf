@@ -7,3 +7,4 @@ output "Blob_URL" {
   value     = azurerm_storage_blob.blob.url
   sensitive = true
 }
+
