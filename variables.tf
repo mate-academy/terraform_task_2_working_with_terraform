@@ -1,0 +1,7 @@
+locals {
+  resource_group_name  = "example-resources"
+  location             = "West Europe"
+  storage_account_name = "examplestorageacc"
+  container_name       = "example-container"
+  blob_name            = "example-blob.txt"
+}
