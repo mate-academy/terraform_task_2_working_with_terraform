@@ -1,0 +1,5 @@
+resource_group_name  = "terraform-task-2"
+location             = "West Europe"
+storage_account_name = "terraform2khubashvili"
+container_name       = "task-2"
+blob_name            = "archive"
