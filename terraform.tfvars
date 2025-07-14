@@ -1,0 +1,5 @@
+resource_group_name   = "my-rg"
+location              = "West Europe"
+storage_account_name  = "examplestorageacc"
+container_name        = "mycontainer"
+blob_name             = "terraform-code.zip"
