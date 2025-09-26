@@ -1,24 +1,24 @@
-variable "azresource_group_name" {
+variable "resource_group_name" {
   type    = string
   default = "example-resources"
 }
 
-variable "azregion" {
+variable "location" {
   type    = string
   default = "West Europe"
 }
 
-variable "azstorage_account_name" {
+variable "storage_account_name" {
   type    = string
   default = "examplestorageacc"
 }
 
-variable "azcontainer_name" {
+variable "container_name" {
   type    = string
   default = "vhds"
 }
 
-variable "azblob_name" {
+variable "blob_name" {
   type    = string
   default = "bn"
 }
