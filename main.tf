@@ -1,11 +1,9 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "3.105.0"
-    }
-  }
+data "archive_file" "terraform_zip" {
+  type        = "zip"
+  source_dir  = "${path.module}"
+  output_path = "${path.module}/terraform_code.zip"
 }
+
 
 resource "azurerm_resource_group" "example" {
   name     = var.resource_group_name
@@ -31,5 +29,7 @@ resource "azurerm_storage_blob" "example" {
   storage_account_name   = azurerm_storage_account.example.name
   storage_container_name = azurerm_storage_container.example.name
   type                   = "Block"
-  source                 = var.blob_source_path
+  source                 = data.archive_file.terraform_zip.output_path
+  content_type           = "application/zip"
 }
+
