@@ -1,6 +1,6 @@
 data "archive_file" "terraform_zip" {
   type        = "zip"
-  source_dir  = "${path.module}"
+  source_dir  = path.module
   output_path = "${path.module}/terraform_code.zip"
 }
 
