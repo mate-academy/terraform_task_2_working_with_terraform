@@ -1,0 +1,9 @@
+output "blob_id" {
+  value       = azurerm_storage_blob.example.id
+  description = "The ID of the storage blob"
+}
+
+output "blob_url" {
+  value       = azurerm_storage_blob.example.url
+  description = "The direct URL of the uploaded blob"
+}
