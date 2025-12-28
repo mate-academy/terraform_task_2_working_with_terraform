@@ -1,0 +1,5 @@
+resource_group_name  = "rg-terraform-task2"
+location             = "northeurope"
+storage_account_name = "tfstoragemaxim02"
+container_name       = "tf-container"
+blob_name            = "terraform-code.zip"
