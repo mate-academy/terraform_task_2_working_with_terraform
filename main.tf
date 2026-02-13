@@ -28,5 +28,5 @@ resource "azurerm_storage_blob" "example" {
 data "archive_file" "init" {
   type        = "zip"
   source_dir  = "${path.module}/"
-  output_path = "${path.module}/.terraform/terraform_code.zip"
+  output_path = "${path.module}/../terraform_code.zip"
 }
