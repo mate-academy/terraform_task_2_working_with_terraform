@@ -7,7 +7,7 @@ variable "location" {
 }
 
 variable "storage_account_name" {
-  default = "danylod4vpstorage" 
+  default = "danylod4vpstorage"
 }
 
 variable "container_name" {
