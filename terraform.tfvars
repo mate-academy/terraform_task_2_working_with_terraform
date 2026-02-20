@@ -1,0 +1,5 @@
+resource_group_name  = "example-resources11"
+location             = "West Europe"
+storage_account_name = "examplestorageacc11"
+container_name       = "vhds"
+blob_name            = "my-awesome-content.zip"

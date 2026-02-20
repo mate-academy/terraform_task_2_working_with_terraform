@@ -1,0 +1,4 @@
+.terraform/
+terraform_code.zip
+terraform.tfstate
+terraform.tfstate.backup
