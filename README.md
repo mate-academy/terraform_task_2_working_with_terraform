@@ -18,4 +18,4 @@ This task involves defining additional resources, organizing the Terraform code 
 6. Provide the ID of the storage blob and the URL of the blob in `outputs.tf`.
 7. Archive the directory with Terraform code.
 8. Define the archive as a source in the storage blob section.
-9. Plan and apply Terraform changes using the `tfplan` file.
+9. Plan and apply Terraform changes using the `tfplan` file.)
