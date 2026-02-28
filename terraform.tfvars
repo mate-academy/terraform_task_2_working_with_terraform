@@ -1,0 +1,5 @@
+resource_group_name  = "mate-terraform-task-rg"
+location             = "Canada Central"
+storage_account_name = "mateterraformtasksa"
+container_name       = "mate-terraform-task-container"
+blob_name            = "mate-terraform-task-blob"
