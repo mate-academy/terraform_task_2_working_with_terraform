@@ -1,0 +1,5 @@
+resource_group_name  = "resourcestkmate1405"
+location             = "West Europe"
+storage_account_name = "storageacctkmate1405"
+container_name       = "containertkmate1405"
+blob_name            = "blobtkmate1405"
