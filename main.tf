@@ -21,14 +21,14 @@ data "archive_file" "tf_code_zip" {
   type        = "zip"
   source_dir  = path.module
   output_path = "${path.module}/terraform_code.zip"
-  excludes    = [
+  excludes = [
     "terraform_code.zip",
     ".terraform",
     ".terraform.lock.hcl",
     "terraform.tfstate",
     "terraform.tfstate.backup",
     "tfplan"
-    ]
+  ]
 }
 
 resource "azurerm_storage_blob" "sb" {
