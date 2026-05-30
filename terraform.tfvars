@@ -1,0 +1,5 @@
+resource_group_name  = "matetesttfresource"
+location             = "westeurope"
+storage_account_name = "matetfac"
+container_name       = "tfcontainer"
+blob_name            = "tfblob"
