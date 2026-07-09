@@ -1,7 +1,19 @@
-locals {
-  resource_group_name  = "example-resources"
-  location             = "Sweden Central"
-  storage_account_name = "examplestorageacc1ands9"
-  container_name       = "content"
-  blob_name            = "TerraformBlob"
+variable "resource_group_name" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "storage_account_name" {
+  type = string
+}
+
+variable "container_name" {
+  type = string
+}
+
+variable "blob_name" {
+  type = string
 }

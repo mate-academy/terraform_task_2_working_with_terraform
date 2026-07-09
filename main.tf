@@ -1,19 +1,10 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "3.105.0"
-    }
-  }
-}
-
 resource "azurerm_resource_group" "example" {
-  name     = local.resource_group_name
-  location = local.location
+  name     = var.resource_group_name
+  location = var.location
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = local.storage_account_name
+  name                     = var.storage_account_name
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
@@ -21,15 +12,20 @@ resource "azurerm_storage_account" "example" {
 }
 
 resource "azurerm_storage_container" "example" {
-  name                  = local.container_name
+  name                  = var.container_name
   storage_account_name  = azurerm_storage_account.example.name
   container_access_type = "private"
 }
 
+data "archive_file" "terraform_source_code" {
+  type        = "zip"
+  source_dir  = "D:\\mate-projects\\terraform_task_2_working_with_terraform\\source_code"
+  output_path = "D:\\mate-projects\\terraform_task_2_working_with_terraform\\terraform_source_code.zip"
+}
 resource "azurerm_storage_blob" "example" {
-  name                   = local.blob_name
+  name                   = var.blob_name
   storage_account_name   = azurerm_storage_account.example.name
   storage_container_name = azurerm_storage_container.example.name
   type                   = "Block"
-  source                 = "D:\\mate-projects\\terraform_task_2_working_with_terraform\\terraform_source_code.zip" # Replace with the path to your local file
+  source                 = data.archive_file.terraform_source_code.output_path
 }
