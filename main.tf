@@ -19,10 +19,10 @@ resource "azurerm_storage_container" "example" {
 
 data "archive_file" "init" {
   type        = "zip"
-  source_dir  = "${path.module}"
+  source_dir  = path.module
   output_path = "${path.module}/files/${var.blob_name}"
 
-  excludes    = [".terraform", ".terraform.lock.hcl", "files"]
+  excludes = [".terraform", ".terraform.lock.hcl", "files"]
 }
 
 resource "azurerm_storage_blob" "example" {
