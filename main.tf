@@ -30,5 +30,5 @@ resource "azurerm_storage_blob" "example" {
   storage_container_name = azurerm_storage_container.example.name
   storage_account_name   = azurerm_storage_account.example.name
   type                   = "Block"
-  source                 = data.archive_file.init.output_path # Архив как источник
+  source                 = data.archive_file.init.output_path
 }
