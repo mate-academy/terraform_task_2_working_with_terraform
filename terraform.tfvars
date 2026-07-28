@@ -1,0 +1,5 @@
+resource_group_name  = "example-resources"
+location             = "West Europe"
+storage_account_name = "examplestorageacc"
+container_name       = "examplecontainer"
+blob_name            = "exampleblob"
