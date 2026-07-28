@@ -1,5 +1,5 @@
-resource_group_name  = "example-resources"
+resource_group_name  = "rg-terraform-task-2"
 location             = "West Europe"
-storage_account_name = "examplestorageacc"
+storage_account_name = "sttask2baranotik"
 container_name       = "examplecontainer"
 blob_name            = "exampleblob"

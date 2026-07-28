@@ -4,9 +4,17 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "3.105.0"
     }
+
+    archive = {
+      source  = "hashicorp/archive"
+      version = "~> 2.4"
+    }
   }
+
+
 }
 
 provider "azurerm" {
   features {}
+  skip_provider_registration = true
 }
