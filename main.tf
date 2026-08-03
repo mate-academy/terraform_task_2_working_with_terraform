@@ -13,7 +13,7 @@ terraform {
 
 data "archive_file" "example" {
   type        = "zip"
-  source_dir  = "${path.module}"
+  source_dir  = path.module
   output_path = "${path.module}/arch.zip"
   excludes    = [".terraform", ".terraform.lock.hcl", "terraform.tfstate", "terraform.tfstate.backup", "tfplan", "arch.zip"]
 }
