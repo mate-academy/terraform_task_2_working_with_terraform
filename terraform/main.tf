@@ -4,9 +4,19 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "3.105.0"
     }
+    archive = {
+      source  = "hashicorp/archive"
+      version = "~> 2.0"
+    }
   }
 }
 
+data "archive_file" "example" {
+  type        = "zip"
+  source_dir  = "${path.module}"
+  output_path = "${path.module}/arch.zip"
+  excludes    = [".terraform", ".terraform.lock.hcl", "terraform.tfstate", "terraform.tfstate.backup", "tfplan", "arch.zip"]
+}
 
 
 resource "azurerm_resource_group" "example" {
@@ -34,5 +44,5 @@ resource "azurerm_storage_blob" "example" {
   storage_account_name   = azurerm_storage_account.example.name
   storage_container_name = azurerm_storage_container.example.name
   type                   = "Block"
-  source                 = "arch.zip"
+  source                 = data.archive_file.example.output_path
 }
