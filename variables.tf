@@ -10,7 +10,7 @@ variable "location" {
 
 variable "storage_account_name" {
   type    = string
-  default = "1ntact"
+  default = "1ntact111"
 }
 
 variable "container_name" {
