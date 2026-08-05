@@ -13,7 +13,7 @@ variable "location" {
 variable "storage_account_name" {
   type        = string
   description = "Name of the storage account"
-  default     = "examplestorageaccclem"
+  default     = "examplestorageaccclemm"
 }
 
 variable "container_name" {
