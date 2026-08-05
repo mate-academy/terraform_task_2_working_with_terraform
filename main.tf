@@ -21,7 +21,7 @@ data "archive_file" "code_archive" {
   type        = "zip"
   source_dir  = path.module
   output_path = "${path.module}/terraform_code.zip"
-  excludes    = [
+  excludes = [
     "terraform_code.zip",
     ".terraform",
     ".terraform.lock.hcl",
