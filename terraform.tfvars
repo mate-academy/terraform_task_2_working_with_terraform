@@ -1,0 +1,5 @@
+resource_group_name  = "mate-tf-task-2"
+location             = "West Europe"
+storage_account_name = "task2storagemaxmlv"
+container_name       = "task2-storage-container"
+blob_name            = "task2-storage-blob"
