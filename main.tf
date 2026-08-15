@@ -22,7 +22,7 @@ data "archive_file" "tf_code_zip" {
   source_dir  = path.module
   output_path = "${path.module}/terraform-code.zip"
   excludes = [
-    "terraform_code.zip",
+    "terraform-code.zip",
     ".terraform",
     ".terraform.lock.hcl",
     "terraform.tfstate",
