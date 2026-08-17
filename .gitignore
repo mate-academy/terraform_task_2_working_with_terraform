@@ -1,0 +1,5 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+code_archive.zip
+crash.log
