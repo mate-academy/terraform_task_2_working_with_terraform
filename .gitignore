@@ -1,0 +1,5 @@
+.terraform
+.idea
+code.zip
+terraform.tfstate
+terraform.tfstate.backup
