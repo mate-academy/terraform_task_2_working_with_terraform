@@ -1,0 +1,5 @@
+resource_group_name  = "terraform_task_2"
+location             = "West Europe"
+storage_account_name = "vanyas627storage"
+container_name       = "my-container"
+blob_name            = "my-file"
