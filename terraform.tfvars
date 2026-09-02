@@ -1,0 +1,5 @@
+resource_group_name  = "example-resources"
+location             = "West Europe"
+storage_account_name = "leerotfstorage2026"
+container_name       = "content"
+blob_name            = "terraform-code.zip"
