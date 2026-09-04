@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "5.3.0"
-    }
-    archive = {
-      source  = "hashicorp/archive"
-      version = "~> 2.0"
-    }
-  }
-}
-
 data "archive_file" "terraform_code" {
   type        = "zip"
   output_path = "${path.module}/terraform_code.zip"
