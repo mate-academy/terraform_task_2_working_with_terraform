@@ -1,25 +1,53 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
-      version = "3.105.0"
+      source  = "hashicorp/azurerm"
+      version = "5.3.0"
+    }
+    archive = {
+      source  = "hashicorp/archive"
+      version = "~> 2.0"
     }
   }
 }
 
-provider "azurerm" {
-  features {}
+data "archive_file" "terraform_code" {
+  type        = "zip"
+  output_path = "${path.module}/terraform_code.zip"
+  source_dir  = path.module
+
+  excludes = [
+    ".terraform",
+    ".terraform.lock.hcl",
+    "terraform.tfstate",
+    "terraform.tfstate.backup",
+    "tfplan",
+    "terraform_code.zip"
+  ]
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
-  location = "West Europe"
+  name     = var.resource_group_name
+  location = var.location
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "examplestorageacc"
+  name                     = var.storage_account_name
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+}
+
+resource "azurerm_storage_container" "example" {
+  name                  = var.container_name
+  storage_account_id    = azurerm_storage_account.example.id
+  container_access_type = "private"
+}
+
+resource "azurerm_storage_blob" "example" {
+  name                 = var.blob_name
+  storage_container_id = azurerm_storage_container.example.id
+  type                 = "Block"
+  source               = data.archive_file.terraform_code.output_path
 }
