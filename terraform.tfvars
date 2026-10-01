@@ -1,0 +1,5 @@
+resource_group_name  = "testterraform1"
+location             = "westus2"
+storage_account_name = "matestorage3637"
+container_name       = "test-1"
+blob_name            = "test-terraform"
