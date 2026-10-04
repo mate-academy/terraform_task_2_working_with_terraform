@@ -1,0 +1,5 @@
+resource_group_name  = "mate-terraform-rg"
+location             = "swedencentral"
+storage_account_name = "matetfstorage2026"
+container_name       = "terraform-container"
+blob_name            = "terraform-code.zip"

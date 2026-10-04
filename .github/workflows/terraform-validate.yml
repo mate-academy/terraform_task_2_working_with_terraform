@@ -3,10 +3,10 @@ name: Terraform Validate
 run-name: ${{ github.actor }} - ${{ github.ref_name }}
 
 on:
-    pull_request:
-      branches: ["main"]
-  
-    workflow_dispatch:
+  pull_request:
+    branches: ["main"]
+
+  workflow_dispatch:
 
 jobs:
   terraform_validate:
@@ -21,7 +21,7 @@ jobs:
       uses: hashicorp/setup-terraform@v3
       with:
         terraform_version: 1.8.4
-    
+
     - name: Check variables.tf
       run: |
         if [ ! -f variables.tf ]; then
@@ -45,16 +45,16 @@ jobs:
           exit 1
         fi
         echo "outputs.tf is present."
-    
+
     - name: Terraform Fmt
       run: terraform fmt -check
-    
+
     - name: Terraform Init
       run: terraform init
 
     - name: Terraform Validate
       run: terraform validate
-    
+
     - name: Check tfplan
       run: |
         if [ ! -f tfplan ]; then
