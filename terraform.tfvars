@@ -1,0 +1,5 @@
+resource_group_name  = "example-resources"
+location             = "Poland Central"
+storage_account_name = "yuliia567"
+container_name       = "content"
+blob_name            = "terraform-code.zip"
