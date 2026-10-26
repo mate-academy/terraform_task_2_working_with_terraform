@@ -22,7 +22,7 @@ data "archive_file" "terraform_package" {
   source_dir  = path.module
   output_path = "${path.module}/${var.blob_name}"
   excludes = [
-    var.blob_name,
+    "task-2-terraform_code.zip",
     "tfplan",
     ".terraform",
     ".terraform.lock.hcl",
