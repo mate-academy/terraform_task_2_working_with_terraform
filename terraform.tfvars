@@ -1,0 +1,5 @@
+resource_group_name  = "rg-terraform-dev-west-europe"
+location             = "West Europe"
+storage_account_name = "storageterraformdev2026"
+container_name       = "terraform-files"
+blob_name            = "terraform-code.zip"
